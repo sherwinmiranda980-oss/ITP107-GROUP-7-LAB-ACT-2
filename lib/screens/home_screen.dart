@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/widgets';
+import '../widgets/task_dialog.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:intl/intl.dart';
-
 import '../models/task.dart';
+
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -19,7 +19,7 @@ class _HomeScreenState extends State<HomeScreen> {
     final Task? task = await showDialog<Task>(
       context: context,
       builder: (context) {
-        return const TaskDialog();
+        return TaskDialog();
       },
     );
 

@@ -4,7 +4,7 @@ class Task {
 
   Task({
     required this.title,
-    required this.date,
+    required this.date, required String description,
   });
 
   Map<String, dynamic> toMap() {
@@ -17,7 +17,9 @@ class Task {
   factory Task.fromMap(Map<dynamic, dynamic> map) {
     return Task(
       title: map['title'] ?? '',
-      date: DateTime.parse(map['date']),
+      date: DateTime.parse(map['date']), description: '',
     );
   }
+
+  String? get description => null;
 }
